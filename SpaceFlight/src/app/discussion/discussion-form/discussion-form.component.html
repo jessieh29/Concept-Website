@@ -1,0 +1,58 @@
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
+  <input
+    class="submit-box"
+    type="hidden"
+    name="Id"
+    [value]="service.formData.Id"
+  />
+  <div class="submit-box form-example">
+    <div class="form-group">
+      <input
+        class="submit-box"
+        type="text"
+        placeholder="Title"
+        name="Title"
+        #Title="ngModel"
+        [(ngModel)]="service.formData.Title"
+        required
+        [class.invalid]="Title.invalid && Title.touched"
+        minlength="5"
+        maxlength="100"
+      />
+    </div>
+
+    <div>
+      <div>
+        <input
+          class="submit-box"
+          type="text"
+          placeholder="Discussion"
+          name="DiscussionBody"
+          #DiscussionBody="ngModel"
+          [(ngModel)]="service.formData.DiscussionBody"
+          required
+          [class.invalid]="DiscussionBody.invalid && DiscussionBody.touched"
+          minlength="15"
+          maxlength="1000"
+        />
+      </div>
+      <input
+        type="hidden"
+        name="CreateDate"
+        [value]="service.formData.CreateDate"
+      />
+      <input
+        type="hidden"
+        name="DiscussionSaved"
+        [value]="service.formData.DiscussionSaved"
+      />
+      <button
+        type="submit"
+        class="submit-btn btn form-group"
+        [disabled]="form.invalid"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

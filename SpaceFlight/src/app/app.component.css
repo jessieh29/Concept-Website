@@ -1,0 +1,205 @@
+/*--- 01 Typography System
+Font sizes:
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Font weights
+Default: 500
+- Line heights
+Default: 1
+Spacing System:
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+--- 02 COLORS
+-Primary: #ffc935
+-Tints:
+-Greys
+#555
+--- 05 SHADOWS
+--- 06 BORDER-RADIUS
+---07 WHITESPACE
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* GENERAL CODE*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* @media (max-width: 1000px) {
+  .section {
+  }
+} */
+
+body {
+  font-family: "share tech", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* HEADER AND NAVIGATION*/
+
+header {
+  background-color: #ffc935;
+  display: flex;
+  width: 100vw;
+  position: relative;
+}
+
+.logo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  height: 9rem;
+  width: auto;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 8.6rem;
+  font-family: "Share Tech Mono";
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  margin-right: 6rem;
+  margin-left: auto;
+  margin-top: 2rem;
+  font-size: 3rem;
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "share tech";
+}
+
+.nav--text {
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.search {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* FOOTER*/
+
+.footer {
+  background-color: #222;
+  color: #ffc935;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  font-size: 2.4rem;
+  font-family: "share tech", sans-serif;
+}
+
+.contact-us {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 21vw;
+  margin-top: 5rem;
+
+  /* text-align: center; */
+}
+
+.follow-us {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 5rem;
+  margin-left: 22vw;
+}
+
+.telephone {
+  margin-left: 10px;
+}
+
+.email-address {
+  margin-left: 12px;
+}
+.email-icon {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 10rem;
+  margin-left: 20vw;
+
+  display: flex;
+}
+
+.contact-info {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 4rem;
+  margin-left: 20vw;
+
+  display: flex;
+  /* justify-content: center; */
+}
+
+.social-media {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 5rem;
+  margin-left: 15vw;
+  display: flex;
+  gap: 1.5rem;
+  /* justify-content: center; */
+}
+
+.social-media-box {
+  height: 4rem;
+  width: 4rem;
+  margin-left: 2vw;
+
+  background-color: rgb(44, 43, 43);
+  box-shadow: 0 0 10px 0.0001px rgba(255, 255, 255, 0.048);
+}
+
+.social-media-box:first-child {
+  margin-left: -2vw;
+}
+
+.social-media-box:hover,
+.social-media-box:active {
+  box-shadow: 0 0 10px 0.0001px rgba(255, 255, 255, 0.205);
+}
+
+.logos {
+  height: 3.4rem;
+  width: 3.4rem;
+  /* stroke: #fddb60; */
+}
+
+.copyright {
+  grid-column: 1/-1;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.icon-footer {
+  height: 4.4rem;
+  width: 4.4rem;
+
+  transform: translate(0, -20%);
+  /* stroke: #ffc935; */
+  /* stroke-width: 4rem; */
+}

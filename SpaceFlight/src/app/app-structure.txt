@@ -1,0 +1,15 @@
+src
+---app folder
+----discussion
+      discussion.component.ts|.html|.css
+--------discussion-form
+            discussion-form.ts|.html|.css
+
+
+    ---app>shared folder
+      --discusison.service
+      --discussion.model
+
+      app.module,ts
+
+  index.html cdn path for boootstrap
