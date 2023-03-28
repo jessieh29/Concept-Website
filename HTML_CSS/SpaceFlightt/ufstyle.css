@@ -1,0 +1,435 @@
+/* UPCOMING FLIGHTS PAGE:
+
+--- 01 Typography System
+Font sizes:
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Font weights
+Dfault: 500
+- Line heights
+Default: 1
+Spacing System:
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+--- 02 COLORS
+-Primary: #e67e22
+-Tints:
+-Greys
+#555
+--- 05 SHADOWS
+--- 06 BORDER-RADIUS
+---07 WHITESPACE
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* GENERAL CODE*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* @media (max-width: 1000px) {
+  .section {
+  }
+} */
+
+body {
+  font-family: "share tech", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* HEADER AND NAVIGATION*/
+
+header {
+  background-color: #ffc935;
+  display: flex;
+  width: 100vw;
+  position: relative;
+}
+
+.logo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  height: 9rem;
+  width: auto;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 8.6rem;
+  font-family: "Share Tech Mono";
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  margin-right: 6rem;
+  margin-left: auto;
+  margin-top: 2rem;
+  font-size: 3rem;
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "share tech";
+}
+
+.nav--text {
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.search {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* News Carousel */
+.upcoming-flight {
+  margin-top: 15rem;
+  text-align: center;
+  width: 30vw;
+  font-size: 5.4rem;
+  z-index: 2;
+
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel {
+  background-color: #fff;
+  width: 1600px;
+  margin: 100px auto;
+  padding: 32px 48px 32px 86px;
+  /* padding-left: 86px;
+  padding-right: 48px; */
+  box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+  border: 4px solid rgb(255, 201, 53);
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 86px;
+  position: relative;
+}
+
+.carousel-img {
+  height: 200px;
+  width: auto;
+  transform: scale(1.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.carousel-news-title {
+  font-size: 3.3rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+.testomonial-text {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #333;
+}
+.testomonial-author {
+  font-size: 2.6rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* CONTROLS */
+.btn {
+  background-color: #fff;
+  border: none;
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--left {
+  background-color: #222;
+  /* IN relation to the parent element */
+  left: 0;
+  top: 50%;
+
+  /* In relation to the element itself */
+  transform: translate(-50%, -50%);
+}
+
+.btn--right {
+  background-color: #222;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  /* Have it 50,-50 here as we want it to move in the right direction not left */
+}
+
+.btn:hover,
+.btn:active {
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 32px);
+
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border: 2px solid #383737;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot--fill {
+  background-color: #dfa300;
+}
+
+/* SECTION 2 */
+.provider-info {
+  margin-top: 30rem;
+  text-align: center;
+  width: 30vw;
+  font-size: 5.4rem;
+  z-index: 2;
+
+  position: relative;
+  grid-column: 1 / span 2;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-2-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 80px;
+  row-gap: 80px;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+
+  font-size: 3rem;
+  color: #333;
+
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 20rem;
+}
+
+.card-titles {
+  text-align: center;
+  width: 30vw;
+  font-size: 4rem;
+}
+
+.section-2-card img {
+  height: 215px;
+  width: auto;
+  transform: scale(1.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  float: left;
+}
+
+.section-2-card p {
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2-card p,
+.section-2-card h3 {
+  margin-left: 40rem;
+  margin-bottom: 32px;
+  line-height: 1.25;
+}
+
+.provider-logo {
+  border: 2px solid #dfa300;
+}
+
+.provider {
+  background-color: #ffdb79;
+  margin: 100px auto;
+  padding: 32px 48px 32px 86px;
+  /* padding-left: 86px;
+  padding-right: 48px; */
+  border-radius: 30px;
+  box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+}
+
+.see-more {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
+  color: rgb(3, 74, 180);
+  cursor: pointer;
+}
+
+.btt-btn {
+  height: 7rem;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: black;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #fddb60;
+  /* font-weight: bold; */
+  font-family: "Share Tech Mono";
+  font-size: 2.4rem;
+  text-decoration: none;
+
+  transition: box-shadow 0.15s;
+}
+
+.btt-btn:hover,
+.btt-btn:active {
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0);
+  cursor: pointer;
+}
+/* FOOTER*/
+
+.footer {
+  background-color: #222;
+  color: #ffc935;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  font-size: 2.4rem;
+  font-family: "share tech", sans-serif;
+}
+
+.contact-us {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 21vw;
+  margin-top: 5rem;
+
+  /* text-align: center; */
+}
+
+.follow-us {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 5rem;
+  margin-left: 22vw;
+}
+
+.telephone {
+  margin-left: 10px;
+}
+
+.email-address {
+  margin-left: 12px;
+}
+.email-icon {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 10rem;
+  margin-left: 20vw;
+
+  display: flex;
+}
+
+.contact-info {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 4rem;
+  margin-left: 20vw;
+
+  display: flex;
+  /* justify-content: center; */
+}
+
+.social-media {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 5rem;
+  margin-left: 15vw;
+  display: flex;
+  gap: 1.5rem;
+  /* justify-content: center; */
+}
+
+.social-media-box {
+  height: 4rem;
+  width: 4rem;
+  margin-left: 2vw;
+
+  background-color: rgb(44, 43, 43);
+  box-shadow: 0 0 10px 0.0001px rgba(255, 255, 255, 0.048);
+}
+
+.social-media-box:first-child {
+  margin-left: -2vw;
+}
+
+.social-media-box:hover,
+.social-media-box:active {
+  box-shadow: 0 0 10px 0.0001px rgba(255, 255, 255, 0.205);
+}
+
+.logos {
+  height: 3.4rem;
+  width: 3.4rem;
+  /* stroke: #fddb60; */
+}
+
+.copyright {
+  grid-column: 1/-1;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.icon-footer {
+  height: 4.4rem;
+  width: 4.4rem;
+
+  transform: translate(0, -20%);
+  /* stroke: #ffc935; */
+  /* stroke-width: 4rem; */
+}

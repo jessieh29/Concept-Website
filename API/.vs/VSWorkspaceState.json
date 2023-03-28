@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\net6.0",
+    "\\Models",
+    "\\Models\\Discussion",
+    "\\Models\\News",
+    "\\Models\\Questions",
+    "\\Properties",
+    "\\Services"
+  ],
+  "SelectedNode": "\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}
